@@ -1,0 +1,51 @@
+
+
+a {
+  color: #515151;
+  @extend .unstyled-link;
+
+  &:hover {
+    color: #666;
+  }
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-black {
+  color: #000;
+}
+
+.text-gray {
+  color: #959595;
+}
+
+.text-red {
+  color: #fe3942;
+}
+
+.text-ligth-gray {
+  color: #eee;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.unstyled-link {
+  text-decoration: none;
+}
+

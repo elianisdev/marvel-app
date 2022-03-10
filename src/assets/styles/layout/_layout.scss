@@ -1,0 +1,11 @@
+@import 'grid';
+@import 'media';
+
+header {
+  position: relative;
+  z-index: 12
+}
+
+main {
+  min-height: 300px;
+}
