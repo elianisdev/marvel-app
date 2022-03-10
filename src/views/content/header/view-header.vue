@@ -4,14 +4,14 @@
 
 <template>
 
-    <div class="store-header-top container flex-between">
-      <div class="flex3 store-header-top-logo">
+    <div class="view-header-top container flex-between">
+      <div class="flex3 view-header-top-logo">
         <router-link :to="{ name: 'home'}" class="flex">
           <img src="../../../assets/images/logo.png" class="img-logo" title="marvel-logo" alt="marvel-logo">
         </router-link>
       </div>
     </div>
-    <div class="store-header-top-menu text-white">
+    <div class="view-header-top-menu text-white">
       <app-menu></app-menu>
     </div>
 

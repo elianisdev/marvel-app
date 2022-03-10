@@ -3,14 +3,14 @@
 </style>
 
 <template>
-  <div class="store-footer">
-    <div class="store-footer-advertisement">
+  <div class="view-footer">
+    <div class="view-footer-advertisement">
 
     </div>
-    <div class="store-footer-content flex-around container">
+    <div class="view-footer-content flex-around container">
 
     </div>
-    <div class="store-footer-copyright flex-between-center container">
+    <div class="view-footer-copyright flex-between-center container">
       <div class="copyright-logo flex1"><img src="" alt=""></div>
       <div class="copyright-info flex10 flex-between">
         <div class="copyright-info-content flex10">

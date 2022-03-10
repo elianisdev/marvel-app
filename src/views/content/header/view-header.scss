@@ -1,17 +1,17 @@
 $ads-width: 60%;
 
-.store-header-advertisement {
+.view-header-advertisement {
   background-color: #515151;
 }
 
-.store-header-top {
+.view-header-top {
   padding-top: 5px;
 
-  .store-header-top-logo {
+  .view-header-top-logo {
     padding-right: 10px;
   }
 
-  .store-header-top-social {
+  .view-header-top-social {
     padding-bottom: 20px;
 
     .top-social-icons {
@@ -67,7 +67,7 @@ $ads-width: 60%;
   }
 }
 
-.store-header-top-menu {
+.view-header-top-menu {
   background-color: #1f1f1f;
   min-height: 50px;
 }

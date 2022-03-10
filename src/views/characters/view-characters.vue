@@ -7,7 +7,7 @@
 
   <section>
     <main>
-  <h1 class="p-block">Content Characters</h1>
+  <h1 class="p-block">Characters</h1>
     </main>
   </section>
 

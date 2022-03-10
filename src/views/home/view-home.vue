@@ -1,7 +1,3 @@
-<style lang="scss">
-  @import 'view-home';
-</style>
-
 <template>
     <section>
       <header>
