@@ -25,7 +25,6 @@
 
   .view-footer-copyright {
     border-top: 1px solid #818181;
-    margin-top: 20px;
     padding: 20px 0;
 
     .copyright-social {
@@ -33,8 +32,10 @@
 
       img {
 
-        filter: brightness(1000%) grayscale(100%);
+        filter: brightness(100%) grayscale(10%);
         opacity: 0.5;
+        width: 100%;
+        margin: 0 auto !important;
 
         &:hover {
           filter: brightness(100%) grayscale(0%);
