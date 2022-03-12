@@ -5,28 +5,32 @@ a {
   @extend .unstyled-link;
 
   &:hover {
-    color: #666;
+    color: #666 !important;
   }
 }
 
 .text-white {
-  color: #fff;
+  color: #fff !important;
 }
 
 .text-black {
-  color: #000;
+  color: #000 !important;
 }
 
 .text-gray {
-  color: #959595;
+  color: #959595 !important;
+}
+
+.text-semi-gray {
+  color: #515151 !important;
 }
 
 .text-red {
-  color: #fe3942;
+  color: #fe3942 !important;
 }
 
 .text-ligth-gray {
-  color: #eee;
+  color: #eee !important;
 }
 
 .align-right {
