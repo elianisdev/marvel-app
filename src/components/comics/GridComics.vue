@@ -75,7 +75,7 @@ onMounted(async () => {
                   :data-id="item.id"
                   :class="[index %2 === 0 ? 'col-md-3' : 'col-md-4']"
                   v-show="validateImages(item.thumbnail?.path)">
-               <router-link class="text-decoration-none" :to="{ name: 'characters'}">
+               <router-link class="text-decoration-none" :to="{ name: 'detail-comics', params: { id: item.id }}">
                <div class="panel"
                     :style="`background-image: url(${item.thumbnail.path + '.' + item.thumbnail.extension});`">
                    <p class="text bottom-right text-red fs-6">{{item.title}}</p>

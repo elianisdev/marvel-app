@@ -33,7 +33,7 @@ defineProps({
               <h2 class="accordion-header" :id="`heading-${item.id}`">
                 <button class="accordion-button collapsed border-start" type="button" data-bs-toggle="collapse"
                         :data-bs-target="`#collapse-${item.id}`" aria-expanded="false" :aria-controls="`collapse-${item.id}`">
-                  {{ item.title }}
+                  {{ item.title ? item.title : item.name }}
                 </button>
               </h2>
               <div :id="`collapse-${item.id}`" class="accordion-collapse collapse border-start"
