@@ -1,10 +1,10 @@
 <script setup>
 import GridCharters from "../../components/characters/GridCharters.vue";
+import ViewTitle from "../content/helpers/ViewTitle.vue";
 </script>
 <template>
 
-    <h2 class="fst-italic fw-bold">Personajes</h2>
-    <hr>
+    <ViewTitle title="Personajes"/>
     <div class="row py-4">
     <GridCharters />
     </div>

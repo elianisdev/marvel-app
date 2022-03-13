@@ -1,14 +1,12 @@
+<script setup>
+import GridComics from "../../components/comics/GridComics.vue";
+import ViewTitle from "../content/helpers/ViewTitle.vue";
+</script>
 <template>
-  <section>
-    <main>
-      <h1 class="p-block">Comics</h1>
 
-    </main>
-  </section>
+  <ViewTitle title="Comics"/>
+  <div class="row py-4">
+    <GridComics />
+  </div>
+
 </template>
-
-<style scoped>
-.p-block {
-  padding: 5rem;
-}
-</style>
