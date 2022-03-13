@@ -22,17 +22,17 @@ const routes = ref({
 
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
   @import 'ViewMenu';
 </style>
 
 <template>
-  <div class="p-3 bg-dark text-white">
+  <div class="pt-3 bg-dark text-white">
       <div class="container">
         <div class="align-items-center justify-content-center justify-content-lg-start top-menu">
           <ul class="nav col-md-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
             <li class="col-md-2 text-center" v-for="item in routes">
-              <RouterLink class="nav-link" :to="{name: item.route}">{{item.name}}</RouterLink>
+              <router-link class="nav-link" :to="{name: item.route}">{{item.name}}</router-link>
             </li>
           </ul>
         </div>

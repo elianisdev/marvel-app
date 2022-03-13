@@ -1,7 +1,8 @@
 <script setup>
 import MarvelApi from "../../api/MarvelApi";
 import {onMounted, ref} from "vue";
-import SearchBar from "../content/SearchBar/SearchBar.vue";
+import SearchBar from "../content/search-bar/SearchBar.vue";
+import Loading from "../content/loading/Loading.vue";
 
 const searchValue = ref('');
 const comics = ref([]);
@@ -9,15 +10,18 @@ const totalRows = ref(0);
 const currentPage = ref(  1);
 const perPage = ref(0);
 const params = ref({});
+const loadingStatus = ref(true);
 
 const getComics = async () => {
   comics.value = await MarvelApi.getComics(params.value);
   comics.value = comics.value.data;
   totalRows.value = comics.value.total;
   perPage.value = comics.value.limit;
+  loadingStatus.value = false;
 }
 
 const handleChangeText = (e) => {
+  loadingStatus.value = true;
   currentPage.value = 0;
   params.value.offset = currentPage.value;
   if (searchValue.value.trim()) {
@@ -30,6 +34,7 @@ const handleChangeText = (e) => {
 }
 
 const handleChangePage = (e) => {
+  loadingStatus.value = true;
   const value = e.target.innerText;
   if (value === 'Ultimo') {
     currentPage.value = parseInt(comics.value.total / perPage.value) + 1;
@@ -54,10 +59,13 @@ onMounted(async () => {
 
 <template>
 
-  <SearchBar placeholder="Escribe aqui un comic ..."
+  <search-bar placeholder="Escribe aqui un comic ..."
              v-model="searchValue" @update:modelValue="handleChangeText"/>
 
-   <div class="comic col-md-12">
+  <div class="row" v-show="loadingStatus" >
+    <loading />
+  </div>
+   <div class="comic col-md-12" v-if="!loadingStatus">
 
      <div class="row px-3 py-2">
 
@@ -67,12 +75,12 @@ onMounted(async () => {
                   :data-id="item.id"
                   :class="[index %2 === 0 ? 'col-md-3' : 'col-md-4']"
                   v-show="validateImages(item.thumbnail?.path)">
-               <RouterLink class="text-decoration-none" :to="{ name: 'characters'}">
+               <router-link class="text-decoration-none" :to="{ name: 'characters'}">
                <div class="panel"
                     :style="`background-image: url(${item.thumbnail.path + '.' + item.thumbnail.extension});`">
                    <p class="text bottom-right text-red fs-6">{{item.title}}</p>
                </div>
-               </RouterLink>
+               </router-link>
              </div>
            </div>
 

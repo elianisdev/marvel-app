@@ -8,22 +8,22 @@ import ViewMenu from "./views/content/menu/ViewMenu.vue";
 <template>
 
   <header>
-    <ViewHeader/>
+    <view-header/>
   </header>
 
   <nav>
-    <ViewMenu/>
+    <view-menu/>
   </nav>
 
   <main class="container">
     <div class="row py-5">
       <div class="col-md-12">
-    <RouterView/>
+    <router-view/>
         </div>
       </div>
   </main>
 
   <footer>
-    <ViewFooter/>
+    <view-footer/>
   </footer>
 </template>

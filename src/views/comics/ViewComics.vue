@@ -3,10 +3,8 @@ import GridComics from "../../components/comics/GridComics.vue";
 import ViewTitle from "../content/helpers/ViewTitle.vue";
 </script>
 <template>
-
-  <ViewTitle title="Comics"/>
+  <view-title title="Comics"/>
   <div class="row py-4">
-    <GridComics />
+    <grid-comics />
   </div>
-
 </template>
