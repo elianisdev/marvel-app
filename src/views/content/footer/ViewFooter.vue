@@ -11,7 +11,7 @@
       </div>
       <div class="col-11 text-gray">
         <span>&copy; Desarrollado por Eliana Suancha</span> <br>
-        <span>Prueba tecnica</span>
+        <span>Prueba tecnica consumiendo API Marvel - 2022</span>
       </div>
         </div>
     </div>

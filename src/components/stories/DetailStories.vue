@@ -6,22 +6,22 @@ import Loading from "../helpers/loading/Loading.vue";
 import TreeList from "../helpers/tree-list/TreeList.vue";
 const route = useRoute()
 
-const comicId = ref(route.params.id)
-const comic = ref({});
+const storyId = ref(route.params.id)
+const story = ref({});
 const characters = ref([]);
 const loadingStatus = ref(true);
 
-const getComic = async () => {
-  comic.value = await MarvelApi.getComicId(comicId.value);
-  comic.value = comic.value.data.results[0];
+const getStory = async () => {
+  story.value = await MarvelApi.getStoryId(storyId.value);
+  story.value = story.value.data.results[0];
 
-  characters.value = await MarvelApi.getComicsCharacters(comicId.value);
+  characters.value = await MarvelApi.getStoriesCharacters(storyId.value);
   characters.value = characters.value.data.results;
 
 }
 
 onMounted(async () => {
-  await getComic();
+  await getStory();
   loadingStatus.value = false;
 });
 
@@ -37,10 +37,10 @@ onMounted(async () => {
     <div class="row" v-if="!loadingStatus">
 
       <div class="col-md-4 border-end">
-        <h3> {{ comic.title }}</h3>
+        <h3> {{ story.title }}</h3>
         <hr>
-        <img class="w-100 p-4"
-            :src="comic.thumbnail?.path + '.' + comic.thumbnail?.extension" :alt="comic.name">
+        <span class="fs-6">
+          {{ story.description ? story.description : 'Descripción no disponible'}}</span>
 
       </div>
 
@@ -50,7 +50,7 @@ onMounted(async () => {
 
         <div class="col-md-12 py-3">
           <p class="fs-6">A continuación podras encontrar una lista detallada de
-            los personajes asociados a {{comic.name}}: </p>
+            los personajes asociados a {{story.name}}: </p>
         </div>
           <tree-list title="Personajes" :items="characters"/>
       </div>

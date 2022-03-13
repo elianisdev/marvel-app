@@ -12,7 +12,7 @@ const comics = ref([]);
 const stories = ref([]);
 const loadingStatus = ref(true);
 
-const getCharter = async () => {
+const getCharacter = async () => {
   character.value = await MarvelApi.getCharacterId(characterId.value);
   character.value = character.value.data.results[0];
 
@@ -25,7 +25,7 @@ const getCharter = async () => {
 }
 
 onMounted(async () => {
-  await getCharter();
+  await getCharacter();
   loadingStatus.value = false;
 });
 
