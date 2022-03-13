@@ -1,7 +1,7 @@
 <script setup>
 import {onMounted, ref} from "vue";
 import MarvelApi from "../../api/MarvelApi";
-import Loading from "../content/loading/Loading.vue";
+import Loading from "../helpers/loading/Loading.vue";
 
 
 const stories = ref([]);

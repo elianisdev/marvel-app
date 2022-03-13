@@ -1,8 +1,8 @@
 <script setup>
   import MarvelApi from "../../api/MarvelApi";
   import {onMounted, ref} from "vue";
-  import SearchBar from "../content/search-bar/SearchBar.vue";
-  import Loading from "../content/loading/Loading.vue";
+  import SearchBar from "../helpers/search-bar/SearchBar.vue";
+  import Loading from "../helpers/loading/Loading.vue";
 
   const searchValue = ref('');
   const characters = ref([]);
@@ -72,7 +72,7 @@
          :data-id="item.id"
          v-show="validateImages(item.thumbnail?.path)">
       <div class="list-item">
-        <router-link class="text-decoration-none" :to="{ name: 'home', params: { id: item.id }}">
+        <router-link class="text-decoration-none" :to="{ name: 'detail-characters', params: { id: item.id }}">
           <div class="item-thumbnail py-1">
             <img :src="item.thumbnail.path + '.' + item.thumbnail.extension" :alt="item.name">
           </div>
@@ -105,5 +105,5 @@
 </template>
 
 <style scoped lang="scss">
- @import 'GridCharters';
+ @import 'GridCharacters';
 </style>
