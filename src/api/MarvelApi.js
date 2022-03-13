@@ -29,6 +29,15 @@ const MarvelApi = {
   getCharacters: async (params) => {
     return await request( 'characters', params );
   },
+  getCharacterId: async (id) => {
+    return await request( `characters/${id}` );
+  },
+  getCharacterStories: async (id) => {
+    return await request( `characters/${id}/stories` );
+  },
+  getCharacterComics: async (id) => {
+    return await request( `characters/${id}/comics` );
+  },
   getComics: async (params) => {
     return await request( `comics`, params );
   },

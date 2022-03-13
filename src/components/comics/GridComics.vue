@@ -1,8 +1,8 @@
 <script setup>
 import MarvelApi from "../../api/MarvelApi";
 import {onMounted, ref} from "vue";
-import SearchBar from "../content/search-bar/SearchBar.vue";
-import Loading from "../content/loading/Loading.vue";
+import SearchBar from "../helpers/search-bar/SearchBar.vue";
+import Loading from "../helpers/loading/Loading.vue";
 
 const searchValue = ref('');
 const comics = ref([]);
@@ -52,7 +52,7 @@ const validateImages = (path) => {
 }
 
 onMounted(async () => {
-  await getComics();
+  await getComics()
 });
 
 </script>
