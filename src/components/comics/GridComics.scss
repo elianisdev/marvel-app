@@ -1,20 +1,22 @@
 .comic {
-  display:flex;
-  flex-wrap:wrap;
   font-family:'Comic Sans', cursive;
-  padding:1vmin;
 }
 
 .panel {
   background-color:#fff;
   border:solid 2px #000;
   box-shadow:0 6px 6px -6px #000;
-  display:inline-block;
-  flex:1 1;
-  height:200px;
-  margin:1vmin;
+  height:350px;
   overflow:hidden;
   position:relative;
+  background-size: 100% 100%;
+  margin: 5px 5px;
+
+  &:hover {
+    transform: scale(1.04);
+    transition: all 0.2s ease;
+    z-index: 10;
+  }
 }
 
 .text {
@@ -72,51 +74,4 @@
   position:absolute;
   transform:skew(-15deg);
   width:0;
-}
-
-.panel:nth-child(1) {
-  flex-basis: 400px;
-}
-.panel:nth-child(2) {
-  flex-basis: 200px;
-}
-.panel:nth-child(3) {
-  flex-basis: 200px;
-}
-.panel:nth-child(4) {
-  flex-basis: 200px;
-}
-.panel:nth-child(5) {
-  flex-basis: 200px;
-}
-.panel:nth-child(6) {
-  flex-basis: 200px;
-}
-.panel:nth-child(7) {
-  flex-basis: 400px;
-}
-.panel:nth-child(8) {
-  flex-basis: 200px;
-}
-.panel:nth-child(9) {
-  flex-basis: 200px;
-}
-
-/*background colors*/
-
- .panel:nth-child(4n+1) {
-   background-image:radial-gradient(circle, yellow, orange);
- }
-
-
-.panel:nth-child(4n+2) {
-  background-image:radial-gradient(circle, lightblue, deepskyblue);
-}
-
-.panel:nth-child(4n+3) {
-  background-image:radial-gradient(circle, palegreen, yellowgreen);
-}
-
-.panel:nth-child(4n+4) {
-  background-image:radial-gradient(circle, lightcoral, tomato);
 }
