@@ -1,6 +1,6 @@
 # Marvel App
 
-Prueba tecnica en VueJs consumiendo la API de Marvel.
+Prueba tecnica en VueJs consumiendo API de Marvel.
 
 ## Customize configuration
 

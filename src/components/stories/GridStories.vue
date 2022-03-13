@@ -54,7 +54,7 @@ onMounted(async () => {
         <div :class="[index %2 === 0 ? 'oddboxinner pt-2' : 'evenboxinner mt-3']"> {{item.title}} </div>
           <div class="text-center">
             <router-link class="btn btn-danger text-white transition-slow"
-                        :to="{ name: 'characters'}">Ver</router-link>
+                         :to="{ name: 'detail-stories', params: { id: item.id }}">Ver</router-link>
           </div>
           </router-link>
       </div>

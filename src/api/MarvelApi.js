@@ -50,6 +50,12 @@ const MarvelApi = {
   getStories: async (params) => {
     return await request( `stories`, params );
   },
+  getStoryId: async (id) => {
+    return await request( `stories/${id}` );
+  },
+  getStoriesCharacters: async (id) => {
+    return await request( `stories/${id}/characters` );
+  },
 };
 
 export default MarvelApi

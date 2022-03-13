@@ -5,6 +5,7 @@ import ViewComics  from "../views/comics/ViewComics.vue";
 import ViewStories from "../views/stories/ViewStories.vue";
 import ViewDetailCharacters from "../views/characters/ViewDetailCharacters.vue";
 import ViewDetailComics from "../views/comics/ViewDetailComics.vue";
+import ViewDetailStories from "../views/stories/ViewDetailStories.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -43,7 +44,7 @@ const router = createRouter({
     {
       path: '/stories/:id',
       name: 'detail-stories',
-      // component: ViewDetailCharacters
+      component: ViewDetailStories
     },
   ]
 })
