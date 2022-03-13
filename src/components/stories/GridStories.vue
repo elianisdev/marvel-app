@@ -50,7 +50,7 @@ onMounted(async () => {
            :data-id="item.id"
            :style=" item.thumbnail ? `background-image: url(${item.thumbnail.path + '.' + item.thumbnail.extension});` : ''">
         <router-link class="text-decoration-none text-dark"
-                    :to="{ name: 'characters'}">
+                     :to="{ name: 'detail-stories', params: { id: item.id }}">
         <div :class="[index %2 === 0 ? 'oddboxinner pt-2' : 'evenboxinner mt-3']"> {{item.title}} </div>
           <div class="text-center">
             <router-link class="btn btn-danger text-white transition-slow"
