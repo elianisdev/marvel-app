@@ -13,10 +13,11 @@
       text-decoration: none;
 
       &:hover {
-        color: var(--site-color-default);
+        color: var(--site-color-default) !important;
         border-bottom: 5px solid var(--site-color-primary);
         background-color: #222;
-        font-weight: bold;
+        font-size: 20px !important;
+        font-weight: bold !important;
       }
 
       &.active {

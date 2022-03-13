@@ -6,9 +6,9 @@
   <header>
     <div class="view-header-top container">
       <div class="view-header-top-logo">
-        <RouterLink :to="{ name: 'home'}">
+        <router-link :to="{ name: 'home'}">
           <img src="../../../assets/images/logo.png" class="img-logo" title="marvel-logo" alt="marvel-logo">
-        </RouterLink>
+        </router-link>
       </div>
     </div>
   </header>

@@ -3,10 +3,8 @@ import GridCharters from "../../components/characters/GridCharters.vue";
 import ViewTitle from "../content/helpers/ViewTitle.vue";
 </script>
 <template>
-
-    <ViewTitle title="Personajes"/>
+    <view-title title="Personajes"/>
     <div class="row py-4">
-    <GridCharters />
+    <grid-charters />
     </div>
-
 </template>

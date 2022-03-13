@@ -32,6 +32,9 @@ const MarvelApi = {
   getComics: async (params) => {
     return await request( `comics`, params );
   },
+  getStories: async (params) => {
+    return await request( `stories`, params );
+  },
 };
 
 export default MarvelApi

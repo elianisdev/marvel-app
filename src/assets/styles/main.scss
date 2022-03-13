@@ -38,3 +38,21 @@
   font-size: 20px;
   font-weight: 600;
 }
+
+.page-link {
+  color: var(--site-color-primary) !important;
+
+  &:hover {
+    font-weight: bold !important;
+  }
+}
+
+.page-item.disabled .page-link {
+  color: var(--site-color-secondary) !important;
+}
+
+.page-item.active .page-link {
+  background-color: #e9ecef !important;
+  border-color: #dee2e6 !important;
+  font-weight: bold !important;
+}
