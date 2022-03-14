@@ -1,0 +1,32 @@
+.top-menu {
+
+  li {
+    font-size: 20px;
+    transform: skew(170deg);
+
+    a {
+      border-bottom: 5px solid transparent;
+      font-size: 18px;
+      height: 45px;
+      padding: 0 10px;
+      color: var(--site-color-default);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--site-color-default) !important;
+        border-bottom: 5px solid var(--site-color-primary);
+        background-color: #222;
+        font-size: 20px !important;
+        font-weight: bold !important;
+      }
+
+      &.active {
+        color: var(--site-color-default);
+        border-bottom: 5px solid var(--site-color-primary);
+        background-color: #222;
+        font-weight: bold;
+      }
+    }
+
+  }
+}

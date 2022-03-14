@@ -1,0 +1,87 @@
+.default-btn {
+  @extend .pointer;
+  @extend .transition-slow;
+  background-color: #fff;
+  border: 1px solid #666;
+  padding: 15px 50px;
+  display:flex;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+$default-height: 50px;
+$default-sm-height: 40px;
+
+.btn {
+  @extend .pointer;
+  @extend .transition-slow;
+  text-transform: uppercase;
+  height: $default-height;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  font-weight: 600;
+  border:none;
+  background-color: #eee;
+
+  &.btn-large {
+    font-size: 20px;
+  }
+
+  &.btn-red {
+    &, &:before, &:after {
+      background-color: $site-color-primary;
+    }
+
+    &:hover {
+      box-shadow: 0 0 20px 2px rgba(0,0,0, 0.3);
+    }
+  }
+
+  &.btn-white {
+    &, &:before, &:after {
+      background-color: #eee;
+    }
+
+    &:hover {
+      box-shadow: 0 0 20px 2px rgba(0,0,0, 0.3);
+    }
+  }
+
+  &.text-white {
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &.btn-sm {
+    height: $default-sm-height;
+
+    &:before, &:after {
+      height: $default-sm-height;
+    }
+  }
+
+  &:before, &:after {
+    top: 0;
+    content: '';
+    height: $default-height;
+    width: 15px;
+    position: absolute;
+    transform: skew(-10deg, 0deg);
+  }
+
+  &:before {
+    left: -10px;
+  }
+
+  &:after {
+    right: -10px;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

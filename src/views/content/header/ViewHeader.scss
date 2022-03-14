@@ -1,0 +1,52 @@
+$ads-width: 60%;
+
+.view-header-advertisement {
+  background-color: #515151;
+}
+
+.view-header-top {
+  padding-top: 5px;
+
+  .view-header-top-logo {
+    padding-right: 10px;
+  }
+
+  .view-header-top-social {
+    padding-bottom: 20px;
+
+    .top-social-icons {
+      position: relative;
+      height: 100%;
+
+      img {
+        padding-right: 15px;
+        filter: brightness(0%);
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .top-bar-nav-top {
+    ul {
+      li {
+        font-size: 15px;
+
+        &:nth-child(1) {
+          padding-right: 20px;
+          margin-right: 20px;
+          background-repeat: no-repeat;
+          background-position: right center;
+        }
+      }
+    }
+  }
+}
+
+.view-header-top-menu {
+  background-color: #1f1f1f;
+  min-height: 50px;
+}
+
+.img-logo {
+  height: 80px;
+}

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+
+.box{
+  height:250px;
+  background: transparent;
+  border: solid black;
+  float:left;
+  font-family: 'Bangers', cursive;
+  font-size: 18px;
+  border-width: 3px 4px 3px 5px;
+  border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+  transform: rotate(2deg);
+  width: 318px !important;
+  margin: 6px;
+
+  &:hover {
+    transform: scale(1.04) rotate(3deg);
+    transition: all 0.2s ease;
+  }
+}
+
+.oddboxinner{
+  margin:15px;
+  transform: rotate(-2deg);
+}
+
+.evenboxinner{
+  transform: rotate(2deg);
+  margin:15px;
+  padding:0 5px;
+  float:right;
+  background:#ddd;
+  border:1px solid #222;
+  box-shadow:3px 3px 0 #222;
+}
+
+.square:nth-child(4n+1) {
+  background-image:radial-gradient(circle, yellow, orange);
+}
+
+.square:nth-child(4n+2) {
+  background-image:radial-gradient(circle, lightblue, deepskyblue);
+}
+
+.square:nth-child(4n+3) {
+  background-image:radial-gradient(circle, palegreen, yellowgreen);
+}
+
+.square:nth-child(4n+4) {
+  background-image:radial-gradient(circle, #ee76ff, #7373ff);
+}
+
+.square:nth-child(4n+5) {
+  background-image:radial-gradient(circle, lightcoral, tomato);
+}
+
+a.btn {
+  font-family: 'Roboto Condensed', sans-serif !important;
+  font-size: 25px !important;
+}
+
+a.btn:hover {
+  color: #fff !important;
+  font-weight: bold !important;
+  font-family: 'Roboto Condensed', sans-serif !important;
+
+}

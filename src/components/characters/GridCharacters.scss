@@ -1,0 +1,46 @@
+.list-item {
+  transform: skew(175deg);
+  width: 100%;
+
+  .item-title {
+    .item-title-name {
+      color: #eee;
+      font-size: 20px;
+      margin: 10px;
+    }
+
+  }
+
+  .item-thumbnail {
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 185px;
+    }
+  }
+
+  &:hover {
+      transform: scale(1.2) skew(175deg);
+      transition: all 0.2s ease;
+  }
+}
+
+.balloon{
+  background-color: var(--site-color-gray);
+  color: var(--site-color-secondary);
+  padding: 10px;
+  width: 100%;
+  height: 110px
+}
+
+.balloon:before {
+  content:"";
+  width: 0;
+  height: 0;
+  position: absolute;
+  margin: -14px 0 0 40px;
+  border-bottom: 20px solid var(--site-color-gray);
+  border-right: 18px solid transparent;
+  border-left: 18px solid transparent;
+}

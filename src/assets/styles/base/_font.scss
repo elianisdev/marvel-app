@@ -1,0 +1,51 @@
+
+
+a {
+  color: #515151;
+  @extend .unstyled-link;
+
+  &:hover {
+    color: #666 !important;
+  }
+}
+
+.text-white {
+  color: #fff !important;
+}
+
+.text-black {
+  color: #000 !important;
+}
+
+.text-gray {
+  color: #959595 !important;
+}
+
+.text-semi-gray {
+  color: #515151 !important;
+}
+
+.text-red {
+  color: #fe3942 !important;
+}
+
+.text-ligth-gray {
+  color: #eee !important;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.unstyled-link {
+  text-decoration: none;
+}
+

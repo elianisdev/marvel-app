@@ -1,0 +1,63 @@
+// Base and reuses
+@import 'base/base';
+// Components
+@import 'components/components';
+
+
+.top-bar-nav-bottom {
+  padding-bottom: 20px;
+
+  .top-bar-search {
+    padding-right: 20px;
+    margin-right: 20px;
+    background-repeat: no-repeat;
+    background-position: right center;
+
+    input {
+      padding-left: 15px;
+      padding-right: 25px;
+      height: 100%;
+      border: none;
+      border-bottom: 1px solid #515151;
+      width: 100%;
+      font-weight: 600;
+      font-size: 18px;
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 18px;
+
+      &:focus {
+        outline: none;
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+.label {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.page-link {
+  color: var(--site-color-primary) !important;
+
+  &:hover {
+    font-weight: bold !important;
+  }
+}
+
+.page-item.disabled .page-link {
+  color: var(--site-color-secondary) !important;
+}
+
+.page-item.active .page-link {
+  background-color: #e9ecef !important;
+  border-color: #dee2e6 !important;
+  font-weight: bold !important;
+}
+
+.image-detail {
+  border: solid 2px #000;
+  box-shadow: 0 6px 6px -6px #000;
+}
