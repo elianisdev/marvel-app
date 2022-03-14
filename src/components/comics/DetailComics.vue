@@ -4,6 +4,7 @@ import {ref, onMounted} from "vue";
 import MarvelApi from "../../api/MarvelApi";
 import Loading from "../helpers/loading/Loading.vue";
 import TreeList from "../helpers/tree-list/TreeList.vue";
+import Favorite from "../helpers/favorite/Favorite.vue";
 const route = useRoute()
 
 const comicId = ref(route.params.id)
@@ -39,9 +40,11 @@ onMounted(async () => {
       <div class="col-md-4 border-end">
         <h3> {{ comic.title }}</h3>
         <hr>
-        <img class="w-100 p-4"
+        <img class="w-100 p-1 image-detail"
             :src="comic.thumbnail?.path + '.' + comic.thumbnail?.extension" :alt="comic.name">
-
+        <div class="col-md-12 text-center">
+          <favorite :id="comic.id" element="comics"/>
+        </div>
       </div>
 
       <div class="col-md-8">

@@ -10,7 +10,7 @@
         <img src="../../../assets/images/logo-footer.jpg" alt="">
       </div>
       <div class="col-11 text-gray">
-        <span>&copy; Desarrollado por Eliana Suancha</span> <br>
+        <span>&copy; Desarrollado por Eliana Suancha Guzman</span> <br>
         <span>Prueba tecnica consumiendo API Marvel - 2022</span>
       </div>
         </div>

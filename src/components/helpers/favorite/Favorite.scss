@@ -1,0 +1,23 @@
+.favorite {
+  color: #cccccc;
+}
+
+.favorite.active {
+  color: #FFA41C !important;
+}
+
+.btn {
+
+  &:hover {
+      box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%) !important;
+
+    .favorite {
+      color: #FFA41C;
+      font-size: 22px;
+    }
+  }
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+

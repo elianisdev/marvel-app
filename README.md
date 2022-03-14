@@ -23,3 +23,9 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### Autor
+
+- Desarrollador - [Eliana Suancha](https://github.com/elianisdev)
+- GitHub - [github.com/elianisdev](https://github.com/elianisdev)
+- LinkedIn - [elianaguz](https://www.linkedin.com/in/elianaguz/)

@@ -2,6 +2,7 @@
 import {onMounted, ref} from "vue";
 import MarvelApi from "../../api/MarvelApi";
 import Loading from "../helpers/loading/Loading.vue";
+import Favorite from "../helpers/favorite/Favorite.vue";
 
 
 const stories = ref([]);
@@ -57,6 +58,9 @@ onMounted(async () => {
                          :to="{ name: 'detail-stories', params: { id: item.id }}">Ver</router-link>
           </div>
           </router-link>
+        <div class="col-md-12 text-center">
+          <favorite :id="item.id" element="stories"/>
+        </div>
       </div>
     </div>
 
