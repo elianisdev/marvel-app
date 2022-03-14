@@ -3,6 +3,8 @@
   import {onMounted, ref} from "vue";
   import SearchBar from "../helpers/search-bar/SearchBar.vue";
   import Loading from "../helpers/loading/Loading.vue";
+  import Favorite from "../helpers/favorite/Favorite.vue";
+  import NotFound from "../helpers/not-found/NotFound.vue";
 
   const searchValue = ref('');
   const characters = ref([]);
@@ -65,6 +67,8 @@
   <div class="row" v-show="loadingStatus" >
     <loading />
   </div>
+  <hr>
+  <not-found v-if="!loadingStatus && characters.results.length === 0" />
   <div class="row" v-if="!loadingStatus">
   <div class="col-md-2 py-3 text-center"
          v-for="(item, index) in characters.results"
@@ -82,10 +86,11 @@
               <h3 class="item-title-name">
                 {{item.name}}
               </h3>
+
             </div>
           </div>
         </router-link>
-
+        <favorite :id="item.id" element="characters"/>
       </div>
     </div>
   </div>

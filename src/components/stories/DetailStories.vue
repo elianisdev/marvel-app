@@ -4,6 +4,7 @@ import {ref, onMounted} from "vue";
 import MarvelApi from "../../api/MarvelApi";
 import Loading from "../helpers/loading/Loading.vue";
 import TreeList from "../helpers/tree-list/TreeList.vue";
+import Favorite from "../helpers/favorite/Favorite.vue";
 const route = useRoute()
 
 const storyId = ref(route.params.id)
@@ -41,7 +42,9 @@ onMounted(async () => {
         <hr>
         <span class="fs-6">
           {{ story.description ? story.description : 'Descripción no disponible'}}</span>
-
+        <div class="col-md-12 text-center">
+          <favorite :id="story.id" element="stories"/>
+        </div>
       </div>
 
       <div class="col-md-8">
